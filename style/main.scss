@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+@use "all.min.css";
+$violet:hsl(257,
+40%,
+49%);
+$SoftMagenta:hsl(300,
+69%,
+71%);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: $violet;
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+}
+
+.container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    padding: 40px 10px;
+    height: 100px;
+}
+
+main {
+    padding: 15px;
+    flex-wrap: wrap !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    img {
+        max-width: 550px;
+        width: 95%;
+        display: block;
+        margin: 10px auto;
+    }
+    .text {
+        max-width: 550px;
+        color: white;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            margin: 15px 0;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        button {
+            border: none;
+            padding: 15px 60px;
+            font-size: 18px;
+            display: block;
+            border-radius: 20px;
+            color: $violet;
+            box-shadow: rgb(83, 83, 83) 0 5px 5px;
+        }
+        .icons {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            span {
+                height: 50px;
+                width: 50px;
+                display: inline-block;
+                padding: 6px;
+                position: relative;
+                border-radius: 50%;
+                border: 2px solid white;
+                margin: 0 15px;
+                cursor: pointer;
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    font-size: 20px !important;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .text {
+        text-align: center;
+    }
+    .icons span {
+        text-align: center;
+    }
+    .icons {
+        margin: 0 auto;
+        width: 100%;
+    }
+    button {
+        margin: auto;
+    }
+}
